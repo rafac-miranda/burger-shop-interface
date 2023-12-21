@@ -16,7 +16,7 @@ export const Container = styled.div`
     #carrinho {
       width: 50px;
       cursor: pointer;
-      margin-left: 80px;
+      margin-left: 40px;
     }
     #cont-cart {
       position: fixed;
