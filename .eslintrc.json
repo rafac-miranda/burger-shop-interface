@@ -1,0 +1,64 @@
+{
+    "settings": {
+        "react": {
+          "fragment": "Fragment",  // Fragment to use (may be a property of <pragma>), default to "Fragment"
+          "version": "detect", // React version. "detect" automatically picks the version you have installed.
+          "flowVersion": "0.53" // Flow version
+        }
+        },
+
+
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "standard",
+        "plugin:react/recommended",
+        "plugin:prettier/recommended",
+        "plugin:react-hooks/recommended"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "prettier",
+        "eslint-plugin-import-helpers",
+        "react-hooks"
+    ],
+    "rules": {
+        "prettier/prettier": [
+            "error",
+            {
+                "endOfLine": "auto"
+            }
+        ],
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
+        "no-unused-vars":"warn",
+        "import-helpers/order-imports": [
+            "warn",
+            { // example configuration
+                "newlinesBetween": "always",
+                "groups": [
+                    "module",
+                    "/^@shared/",
+                    [
+                        "parent",
+                        "sibling",
+                        "index"
+                    ]
+                ],
+                "alphabetize": {
+                    "order": "asc",
+                    "ignoreCase": true
+                }
+            }
+        ]
+    }
+}
