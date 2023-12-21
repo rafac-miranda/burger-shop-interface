@@ -73,7 +73,7 @@ export const CategoriesMenu = styled.div`
     align-items: last baseline;
     gap: 15px;
     background: rgba(0, 0, 0, 0.7);
-    padding: 20px;
+    padding: 10px;
     width: 100%;
     margin-top: -5px;
     height: 60px;
@@ -112,7 +112,7 @@ export const CategoryButton = styled.button`
     border-bottom: ${props =>
       props.isActiveCategory && '2px solid rgba(151, 88, 166, 0.9)'};
     color: ${props => (props.isActiveCategory ? '#9758a6' : '#fff')};
-    font-size: 17px;
+    font-size: 13px;
     line-height: 20px;
     font-weight: bold;
   }
