@@ -22,7 +22,9 @@ function CardProducts({ product }) {
         <ProductName style={{ textTransform: 'uppercase' }}>
           {product.name}
         </ProductName>
-        <ProductDetails>{product.details}</ProductDetails>
+        <ProductDetails style={{ textTransform: 'uppercase' }}>
+          {product.details}
+        </ProductDetails>
         <ProductPrice>{product.formatedPrice}</ProductPrice>
         <Button id="btn-add" onClick={() => putProductInCart(product)}>
           Adicionar
