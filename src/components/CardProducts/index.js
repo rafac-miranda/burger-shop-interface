@@ -22,7 +22,10 @@ function CardProducts({ product }) {
         <ProductName style={{ textTransform: 'uppercase' }}>
           {product.name}
         </ProductName>
-        <ProductDetails>{product.details}</ProductDetails>
+        <ProductDetails>
+          {product.details}Pão selado na chapa, 1 ovo, 2 hamburguers, queijo,
+          alface e tomate.
+        </ProductDetails>
         <ProductPrice>{product.formatedPrice}</ProductPrice>
         <Button id="btn-add" onClick={() => putProductInCart(product)}>
           Adicionar
