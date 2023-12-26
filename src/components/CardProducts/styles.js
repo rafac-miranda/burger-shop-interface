@@ -155,4 +155,5 @@ export const SeletorPizzas = styled.div`
   width: 400px;
   height: 200px;
   background: #ffff;
+  position: fixed;
 `
