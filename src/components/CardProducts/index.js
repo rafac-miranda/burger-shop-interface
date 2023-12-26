@@ -13,7 +13,7 @@ import {
 
 function CardProducts({ product }) {
   const { putProductInCart } = useCart()
-  if (product.name === 'pizzas dois sabores') {
+  if (product.category_id === 14 || product.category_id === 21) {
     return (
       <Container>
         <div id="img-btn">
