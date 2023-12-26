@@ -53,6 +53,7 @@ export const LabelUpload = styled.label`
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 3px;
+  color: #ffffff;
 
   input {
     opacity: 0;

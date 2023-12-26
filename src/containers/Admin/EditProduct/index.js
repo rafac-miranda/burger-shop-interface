@@ -129,9 +129,10 @@ function EditProduct() {
 
         <Label>INGREDIENTES</Label>
         <Input
+          placeholder="(Opcional)"
           type="text"
           {...register('details')}
-          defaultValue={product.details || '(Opcional)'}
+          defaultValue={product.details}
         />
         <ErrorMessage> {errors.details?.message}</ErrorMessage>
 
