@@ -54,6 +54,7 @@ export const LabelUpload = styled.label`
   text-transform: uppercase;
   margin-bottom: 3px;
   color: #ffffff;
+  font-size: 13px;
 
   input {
     opacity: 0;
