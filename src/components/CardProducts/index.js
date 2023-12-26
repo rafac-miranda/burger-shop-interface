@@ -8,14 +8,16 @@ import {
   Image,
   ProductDetails,
   ProductName,
-  ProductPrice
+  ProductPrice,
+  SeletorPizzas
 } from './styles'
 
 function CardProducts({ product }) {
-  const { putProductInCart, showPizzasMedias } = useCart()
+  const { putProductInCart } = useCart()
   if (product.category_id === 14) {
     return (
       <Container>
+        <SeletorPizzas></SeletorPizzas>
         <div id="img-btn">
           <Image src={product.url} alt="product-image" />
         </div>
@@ -27,7 +29,7 @@ function CardProducts({ product }) {
             {product.details}
           </ProductDetails>
           <ProductPrice>{product.formatedPrice}</ProductPrice>
-          <Button id="btn-add" onClick={() => showPizzasMedias()}>
+          <Button id="btn-add" onClick={() => putProductInCart(product)}>
             Selecionar
           </Button>
         </div>

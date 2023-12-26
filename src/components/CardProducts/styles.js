@@ -151,3 +151,8 @@ export const ProductPrice = styled.p`
     margin-top: 30px;
   }
 `
+export const SeletorPizzas = styled.div`
+  width: 400px;
+  height: 200px;
+  background: #ffff;
+`
