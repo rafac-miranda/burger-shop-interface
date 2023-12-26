@@ -18,7 +18,11 @@ function CardProducts({ product }) {
     return (
       <Container>
         <SeletorPizzas>
-          <p>Olá mundo!</p>
+          <p>Sabor 1:</p>
+          <input type="select" />
+          <p>Sabor 2:</p>
+          <input type="select" />
+          <button>ADICIONAR</button>
         </SeletorPizzas>
         <div id="img-btn">
           <Image src={product.url} alt="product-image" />

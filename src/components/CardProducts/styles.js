@@ -152,8 +152,12 @@ export const ProductPrice = styled.p`
   }
 `
 export const SeletorPizzas = styled.div`
-  width: 100%;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 360;
+  height: 245;
   background: #ffff;
   position: fixed;
   border-radius: 20px;
