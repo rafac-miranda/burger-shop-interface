@@ -12,8 +12,8 @@ import {
 } from './styles'
 
 function CardProducts({ product }) {
-  const { putProductInCart } = useCart()
-  if (product.category_id === 14 || product.category_id === 21) {
+  const { putProductInCart, showPizzasMedias } = useCart()
+  if (product.category_id === 14) {
     return (
       <Container>
         <div id="img-btn">
@@ -27,7 +27,7 @@ function CardProducts({ product }) {
             {product.details}
           </ProductDetails>
           <ProductPrice>{product.formatedPrice}</ProductPrice>
-          <Button id="btn-add" onClick={() => putProductInCart(product)}>
+          <Button id="btn-add" onClick={() => showPizzasMedias()}>
             Selecionar
           </Button>
         </div>
