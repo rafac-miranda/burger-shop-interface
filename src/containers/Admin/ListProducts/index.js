@@ -55,7 +55,7 @@ function ListProducts() {
                 style={{ fontWeight: 'bold', fontSize: '16px' }}
                 align="center"
               >
-                PRODUTO EM PROMOÇÃO
+                PRODUTO EM OFERTA
               </TableCell>
               <TableCell
                 style={{ fontWeight: 'bold', fontSize: '16px' }}
