@@ -17,7 +17,9 @@ function CardProducts({ product }) {
   if (product.category_id === 14) {
     return (
       <Container>
-        <SeletorPizzas></SeletorPizzas>
+        <SeletorPizzas>
+          <p>Olá mundo!</p>
+        </SeletorPizzas>
         <div id="img-btn">
           <Image src={product.url} alt="product-image" />
         </div>
