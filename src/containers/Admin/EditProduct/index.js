@@ -33,7 +33,8 @@ function EditProduct() {
     name: Yup.string().required('Digite o nome do produto'),
     price: Yup.string().required('Digite o preço do produto'),
     category: Yup.object().required('Selecione uma categoria'),
-    offer: Yup.bool()
+    offer: Yup.bool(),
+    details: Yup.string()
   })
 
   const {
@@ -53,6 +54,7 @@ function EditProduct() {
     productFormData.append('category_id', data.category.id)
     productFormData.append('file', data.file[0])
     productFormData.append('offer', data.offer)
+    productFormData.append('details', data.details)
 
     await toast.promise(api.put(`products/${product.id}`, productFormData), {
       pending: 'Editando produto',
@@ -124,6 +126,14 @@ function EditProduct() {
           }}
         ></Controller>
         <ErrorMessage> {errors.category?.message}</ErrorMessage>
+
+        <Label>INGREDIENTES</Label>
+        <Input
+          type="text"
+          {...register('details')}
+          defaultValue={product.details || '(Opcional)'}
+        />
+        <ErrorMessage> {errors.details?.message}</ErrorMessage>
 
         <ContainerItens>
           <Label>PRODUTO EM PROMOÇÃO?</Label>
