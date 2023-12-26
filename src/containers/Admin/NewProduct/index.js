@@ -21,6 +21,7 @@ function NewProduct() {
     name: Yup.string().required('Digite o nome do produto'),
     price: Yup.string().required('Digite o preço do produto'),
     category: Yup.object().required('Selecione uma categoria'),
+    details: Yup.string(),
     file: Yup.mixed()
       .test('required', 'Carregue uma imagem', value => {
         return value?.length > 0
@@ -46,6 +47,7 @@ function NewProduct() {
     productFormData.append('price', data.price)
     productFormData.append('category_id', data.category.id)
     productFormData.append('file', data.file[0])
+    productFormData.append('details', data.details)
 
     await toast.promise(api.post('products', productFormData), {
       pending: 'Adicionando produto',
@@ -111,6 +113,11 @@ function NewProduct() {
           }}
         ></Controller>
         <ErrorMessage> {errors.category?.message}</ErrorMessage>
+
+        <Label>INGREDIENTES</Label>
+        <Input type="text" {...register('details')} />
+        <ErrorMessage> {errors.details?.message}</ErrorMessage>
+
         <ButtonStyled>ADICIONAR</ButtonStyled>
       </form>
     </Container>
