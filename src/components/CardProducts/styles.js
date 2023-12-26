@@ -126,9 +126,8 @@ export const ProductName = styled.p`
 `
 
 export const ProductDetails = styled.i`
-  font-weight: 500;
-  text-align: justify;
   color: #fff;
+  font-size: 10px;
 `
 
 export const ProductPrice = styled.p`
