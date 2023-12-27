@@ -41,12 +41,6 @@ export const CartProvider = ({ children }) => {
     })
   }
 
-  const showPizzasMedias = async product => {
-    ;<span>
-      <div> Olá mundo! </div>
-    </span>
-  }
-
   const deleteProducts = async productId => {
     const newCart = cartProducts.filter(product => product.id !== productId)
 

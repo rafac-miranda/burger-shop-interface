@@ -4,6 +4,7 @@ import { useHistory } from 'react-router-dom'
 import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 
 import Carrinho from '../../assets/compras.png'
+import CardPizzas from '../../components/CardPizzas'
 import CardProducts from '../../components/CardProducts'
 import Header from '../../components/Header'
 import { useCart } from '../../hooks/CartContext'
@@ -14,7 +15,8 @@ import {
   Container,
   CategoryButton,
   CategoriesMenu,
-  ProductsContainer
+  ProductsContainer,
+  PizzasSelector
 } from './styles'
 
 function Home() {
@@ -114,6 +116,12 @@ function Home() {
             <CardProducts key={product.id} product={product} />
           ))}
       </ProductsContainer>
+      <PizzasSelector>
+        {filteredProducts &&
+          filteredProducts.map(product => (
+            <CardPizzas key={product.id} product={product} />
+          ))}
+      </PizzasSelector>
     </Container>
   )
 }

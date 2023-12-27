@@ -131,6 +131,14 @@ export const CategoryButton = styled.button`
       props.isActiveCategory ? '#fff' : 'rgba(151, 88, 166, 0.7)'};
   }
 `
+export const PizzasSelector = styled.div`
+  @media only screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+`
 
 export const ProductsContainer = styled.div`
   @media only screen and (min-width: 768px) {

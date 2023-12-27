@@ -8,60 +8,30 @@ import {
   Image,
   ProductDetails,
   ProductName,
-  ProductPrice,
-  SeletorPizzas
+  ProductPrice
 } from './styles'
 
 function CardProducts({ product }) {
   const { putProductInCart } = useCart()
-  if (product.category_id === 14) {
-    return (
-      <Container>
-        <SeletorPizzas>
-          <p>Sabor 1:</p>
-          <input type="select" />
-          <p>Sabor 2:</p>
-          <input type="select" />
-          <button>ADICIONAR</button>
-        </SeletorPizzas>
-        <div id="img-btn">
-          <Image src={product.url} alt="product-image" />
-        </div>
-        <div id="name-price-details">
-          <ProductName style={{ textTransform: 'uppercase' }}>
-            {product.name}
-          </ProductName>
-          <ProductDetails style={{ textTransform: 'uppercase' }}>
-            {product.details}
-          </ProductDetails>
-          <ProductPrice>{product.formatedPrice}</ProductPrice>
-          <Button id="btn-add" onClick={() => putProductInCart(product)}>
-            Selecionar
-          </Button>
-        </div>
-      </Container>
-    )
-  } else {
-    return (
-      <Container>
-        <div id="img-btn">
-          <Image src={product.url} alt="product-image" />
-        </div>
-        <div id="name-price-details">
-          <ProductName style={{ textTransform: 'uppercase' }}>
-            {product.name}
-          </ProductName>
-          <ProductDetails style={{ textTransform: 'uppercase' }}>
-            {product.details}
-          </ProductDetails>
-          <ProductPrice>{product.formatedPrice}</ProductPrice>
-          <Button id="btn-add" onClick={() => putProductInCart(product)}>
-            Adicionar
-          </Button>
-        </div>
-      </Container>
-    )
-  }
+  return (
+    <Container>
+      <div id="img-btn">
+        <Image src={product.url} alt="product-image" />
+      </div>
+      <div id="name-price-details">
+        <ProductName style={{ textTransform: 'uppercase' }}>
+          {product.name}
+        </ProductName>
+        <ProductDetails style={{ textTransform: 'uppercase' }}>
+          {product.details}
+        </ProductDetails>
+        <ProductPrice>{product.formatedPrice}</ProductPrice>
+        <Button id="btn-add" onClick={() => putProductInCart(product)}>
+          Adicionar
+        </Button>
+      </div>
+    </Container>
+  )
 }
 
 export default CardProducts
