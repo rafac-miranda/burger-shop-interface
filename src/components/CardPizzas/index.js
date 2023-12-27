@@ -11,9 +11,9 @@ function CardPizzas({ product }) {
       <Container>
         <SeletorPizzas>
           <Label>Sabor 1:</Label>
-          <Input type="select" />
+          <Input type="radio" />
           <Label>Sabor 2:</Label>
-          <Input type="select">Teste</Input>
+          <Input type="radio">Teste</Input>
           <Button onClick={() => putProductInCart(product)}>ADICIONAR</Button>
         </SeletorPizzas>
       </Container>
